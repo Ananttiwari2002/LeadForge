@@ -1,0 +1,4 @@
+# LeadForge is a framework-free static site — there is no build step.
+# Netlify should publish the repository root as-is.
+[build]
+  publish = "."
