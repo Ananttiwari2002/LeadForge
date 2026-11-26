@@ -1,0 +1,8 @@
+# OS / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Trae-generated HTML share packages (build output)
+.trae-html-share-packages/
+*.zip

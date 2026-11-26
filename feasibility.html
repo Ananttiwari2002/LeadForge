@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="Implementation feasibility, system boundaries, responsible AI, privacy, and a phased roadmap for the LeadForge concepts.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Feasibility | LeadForge</title><link rel="stylesheet" href="assets/styles.css"><script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-row">
+    <a class="brand" href="index.html" aria-label="LeadForge home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" focusable="false"><defs><linearGradient id="lfT" x1="6" y1="4" x2="42" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#eaffb4"/><stop offset="1" stop-color="#a6d937"/></linearGradient><linearGradient id="lfL" x1="6" y1="12" x2="24" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#5d7bff"/><stop offset="1" stop-color="#2a43d6"/></linearGradient><linearGradient id="lfR" x1="24" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1e2d74"/><stop offset="1" stop-color="#0b1230"/></linearGradient></defs><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" fill="url(#lfT)"/><path d="M7 14.5 24 23v19L7 33.5v-19Z" fill="url(#lfL)"/><path d="M41 14.5 24 23v19l17-9.5v-19Z" fill="url(#lfR)"/><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" stroke="#171918" stroke-opacity=".45" stroke-width="1" stroke-linejoin="round"/><path d="M24 10.4l1.6 3.1 3.3 1.2-3.3 1.2-1.6 3.1-1.6-3.1-3.3-1.2 3.3-1.2 1.6-3.1Z" fill="#17204f"/></svg></span><span><span class="brand-name">leadforge</span><span class="brand-caption">Prospect intelligence</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu"><span aria-hidden="true">+ </span>Menu</button>
+    <nav class="primary-nav" id="site-navigation" aria-label="Main navigation"><a href="index.html">Overview</a><a href="platform.html">Lead concept</a><a href="workspace.html">Workspace</a><a href="people.html">HR app</a><a href="hr-app.html">HR prototype</a><a href="research.html">Research</a><a href="personas.html">Personas</a><a href="feasibility.html" aria-current="page">Feasibility</a><a href="solution.html">Coverage</a><a href="team.html">Team</a></nav>
+    <a class="nav-cta header-cta" href="contact.html">Share a thought <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <p class="eyebrow">Architecture / Responsible delivery</p>
+      <h1>Feasible begins<br>with <span class="display-italic">clear boundaries.</span></h1>
+      <p class="lede">The current deliverable is a static, framework-free frontend. A real lead research product and a real HR platform would be separate services with different data, users, risk controls, and integration needs.</p>
+      <div class="page-meta"><span><i class="meta-square" aria-hidden="true"></i> No backend in this prototype</span><span>No APIs or integrations</span><span>Roadmap is indicative</span></div>
+    </div></section>
+    <section class="section section-rule"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">Future system boundary</p><h2>Keep the interface<br>honest about <span class="display-italic">what it knows.</span></h2></div><p>The frontend should consume explicit, permission-checked services rather than quietly collecting data from browsers or blending unrelated project tracks.</p></div>
+      <div class="architecture ink-panel reveal" aria-label="Potential future architecture layers">
+        <div><b>01 / Experience</b><span>Accessible web interface, clear source and status labels, user-controlled review.</span></div>
+        <div><b>02 / Application API</b><span>Authenticated endpoints, validation, authorization, audit events, and rate controls.</span></div>
+        <div><b>03 / Domain services</b><span>Separate lead qualification and HR workflow services with distinct data models.</span></div>
+        <div><b>04 / Connectors</b><span>Only approved data providers and HR systems, subject to licensing and integration agreements.</span></div>
+      </div>
+      <ol class="flow-line reveal">
+        <li><b>Request</b><span>User defines an allowed task and scope.</span></li>
+        <li><b>Authorize</b><span>Check identity, role, consent, and policy.</span></li>
+        <li><b>Retrieve</b><span>Use approved sources or connected systems.</span></li>
+        <li><b>Validate</b><span>Normalize data and keep its provenance.</span></li>
+        <li><b>Present</b><span>Show evidence, confidence, and uncertainty.</span></li>
+        <li><b>Review</b><span>Human confirms, corrects, or rejects.</span></li>
+      </ol>
+      <p class="micro" style="margin-top:24px">Possible future API seams: organization search, source evidence, qualification criteria, review decisions, HR workflow requests, and aggregate reporting. These are design boundaries, not existing endpoints.</p>
+    </div></section>
+    <section class="section section-rule"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">Feasibility and responsibility</p><h2>Trust is part of<br><span class="display-italic">the implementation.</span></h2></div><p>Each project track handles different information. They should not share records, permissions, or inferred data just because they appear in one showcase.</p></div>
+      <div class="criteria-grid reveal">
+        <div class="criteria-item"><strong>Sources and licensing</strong><p>Confirm provider terms, permitted access, attribution, reuse, and regional restrictions before any public-source collection. No scraping is performed here.</p></div>
+        <div class="criteria-item"><strong>Privacy and retention</strong><p>Minimize data and define purpose, retention, deletion, access, and notice. HR records can be sensitive; do not feed them into lead intelligence or general AI tools.</p></div>
+        <div class="criteria-item"><strong>Accuracy and freshness</strong><p>Store provenance and timestamps, detect duplicates, show gaps, and give people a correction path. A match score is not a verified fact.</p></div>
+        <div class="criteria-item"><strong>Bias and human review</strong><p>Test qualification criteria for uneven effects. Do not automate employment decisions; keep consequential choices accountable to authorized people.</p></div>
+        <div class="criteria-item"><strong>Security and access</strong><p>Plan least-privilege roles, strong authentication, encryption, audit logs, secure development, incident response, and periodic access review.</p></div>
+        <div class="criteria-item"><strong>Integration constraints</strong><p>Confirm APIs, data ownership, update frequency, regional availability, contract limits, and vendor-specific permissions before promising interoperability.</p></div>
+        <div class="criteria-item"><strong>Operational quality</strong><p>Define monitoring, failure states, support ownership, accessible design, recovery, and clear stale-data handling before production.</p></div>
+        <div class="criteria-item"><strong>Legal and governance review</strong><p>Obtain qualified review for applicable privacy, employment, marketing, accessibility, and records obligations before a real launch.</p></div>
+      </div>
+    </div></section>
+    <section class="section section-rule"><div class="shell">
+      <div class="section-head"><div><p class="eyebrow">Indicative roadmap</p><h2>Prove the workflow<br>before <span class="display-italic">adding automation.</span></h2></div></div>
+      <div class="roadmap reveal">
+        <article class="roadmap-step"><span class="smallcaps">Phase 01 / Learn</span><h3>Validate the problem</h3><p>Complete the HR research and lead-user discovery separately. Review source rules, define user tasks, and agree on success measures.</p><ul><li>Participant and data safeguards</li><li>Workflow prototypes</li><li>Prioritized requirements</li></ul></article>
+        <article class="roadmap-step"><span class="smallcaps">Phase 02 / Prove</span><h3>Test a narrow slice</h3><p>Build a controlled prototype with approved test data. Validate permissions, provenance, accessibility, correction, and failure states.</p><ul><li>No high-impact automation</li><li>Limited, documented scope</li><li>Security and usability review</li></ul></article>
+        <article class="roadmap-step"><span class="smallcaps">Phase 03 / Operate</span><h3>Expand with evidence</h3><p>Only after approval, add integrations and operational support in small increments with ongoing monitoring and user feedback.</p><ul><li>Vendor and legal approvals</li><li>Retention and audit controls</li><li>Measure, review, and iterate</li></ul></article>
+      </div>
+    </div></section>
+    <section class="section-tight section-rule"><div class="shell"><div class="notice"><strong>Current implementation</strong>Every page here is static HTML, CSS, and browser-native JavaScript. There is no API, account, data source, AI model, analytics, or form submission service.</div></div></section>
+  </main>
+  <div class="checker-band" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <footer class="site-footer"><div class="footer-inner">
+    <div class="footer-topline"><span>LeadForge / Academic showcase</span><span>A concept in progress · 2026</span></div>
+    <div class="footer-headline"><h2>Let's find<br>the next thing.</h2><a class="button" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-links"><div class="footer-lockup"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" focusable="false"><defs><linearGradient id="lfT" x1="6" y1="4" x2="42" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#eaffb4"/><stop offset="1" stop-color="#a6d937"/></linearGradient><linearGradient id="lfL" x1="6" y1="12" x2="24" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#5d7bff"/><stop offset="1" stop-color="#2a43d6"/></linearGradient><linearGradient id="lfR" x1="24" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1e2d74"/><stop offset="1" stop-color="#0b1230"/></linearGradient></defs><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" fill="url(#lfT)"/><path d="M7 14.5 24 23v19L7 33.5v-19Z" fill="url(#lfL)"/><path d="M41 14.5 24 23v19l17-9.5v-19Z" fill="url(#lfR)"/><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" stroke="#171918" stroke-opacity=".45" stroke-width="1" stroke-linejoin="round"/><path d="M24 10.4l1.6 3.1 3.3 1.2-3.3 1.2-1.6 3.1-1.6-3.1-3.3-1.2 3.3-1.2 1.6-3.1Z" fill="#17204f"/></svg></span><span class="brand-name">leadforge</span></a><p>An AI-assisted lead intelligence concept, plus a separate HR app study. Prototypes, not services.</p></div><div class="footer-column"><strong>Product</strong><a href="platform.html">Lead concept</a><a href="workspace.html">Workspace demo</a><a href="feasibility.html">Feasibility</a><a href="solution.html">Coverage</a><a href="contact.html">Feedback</a></div><div class="footer-column"><strong>Study</strong><a href="people.html">HR app design</a><a href="research.html">Research plan</a><a href="personas.html">Personas</a><a href="hr-app.html">HR prototype</a></div><div class="footer-column"><strong>Team &amp; notes</strong><a href="team.html">Creators</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookies</a></div></div>
+    <div class="footer-bottom"><span>Academic prototype. Sample data is illustrative; nothing is scraped, submitted, or stored on a server.</span><span>© LeadForge / 2026</span></div>
+  </div></footer>
+</body>
+</html>

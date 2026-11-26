@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="A clickable HR app prototype covering onboarding, self-service, attendance, benefits, performance, communication and reporting — the prioritised HRMM504 feature set.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>HR app prototype | LeadForge</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+  <script src="assets/hr-app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-row">
+    <a class="brand" href="index.html" aria-label="LeadForge home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" focusable="false"><defs><linearGradient id="lfT" x1="6" y1="4" x2="42" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#eaffb4"/><stop offset="1" stop-color="#a6d937"/></linearGradient><linearGradient id="lfL" x1="6" y1="12" x2="24" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#5d7bff"/><stop offset="1" stop-color="#2a43d6"/></linearGradient><linearGradient id="lfR" x1="24" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1e2d74"/><stop offset="1" stop-color="#0b1230"/></linearGradient></defs><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" fill="url(#lfT)"/><path d="M7 14.5 24 23v19L7 33.5v-19Z" fill="url(#lfL)"/><path d="M41 14.5 24 23v19l17-9.5v-19Z" fill="url(#lfR)"/><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" stroke="#171918" stroke-opacity=".45" stroke-width="1" stroke-linejoin="round"/><path d="M24 10.4l1.6 3.1 3.3 1.2-3.3 1.2-1.6 3.1-1.6-3.1-3.3-1.2 3.3-1.2 1.6-3.1Z" fill="#17204f"/></svg></span><span><span class="brand-name">leadforge</span><span class="brand-caption">Prospect intelligence</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu"><span aria-hidden="true">+ </span>Menu</button>
+    <nav class="primary-nav" id="site-navigation" aria-label="Main navigation"><a href="index.html">Overview</a><a href="platform.html">Lead concept</a><a href="workspace.html">Workspace</a><a href="people.html">HR app</a><a href="hr-app.html">HR prototype</a><a href="research.html">Research</a><a href="personas.html">Personas</a><a href="feasibility.html">Feasibility</a><a href="solution.html">Coverage</a><a href="team.html">Team</a></nav>
+    <a class="nav-cta header-cta" href="contact.html">Share a thought <span aria-hidden="true">↗</span></a>
+  </div></header>
+
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <p class="eyebrow">Track 02 / HRMM504 / Working prototype</p>
+      <h1>The feature set,<br>made <span class="display-italic shimmer">clickable.</span></h1>
+      <p class="lede">A clickable prototype of the prioritized feature set: onboarding, self-service, attendance, benefits, performance, communication and reporting. Everything runs in your browser with local state — no accounts, no server.</p>
+      <div class="page-meta"><span><i class="meta-square" aria-hidden="true"></i> Seven prioritised features</span><span>Runs fully in the browser</span><span>Illustrative demo data</span></div>
+    </div></section>
+
+    <section class="section-tight section-rule"><div class="shell">
+      <div class="notice"><strong>How to read this prototype</strong>Switch the role between <em>Employee</em> and <em>HR manager</em> to see permission-aware views. Tick tasks, clock in, choose a plan, update a goal or mark an announcement read — your choices persist in this browser only. Data shown is illustrative sample content, not real employee records.</div>
+    </div></section>
+
+    <section class="section-tight"><div class="shell">
+      <div class="hrapp" data-hrapp>
+        <aside class="hrapp-side" aria-label="Application navigation">
+          <div class="hrapp-brand">
+            <span class="brand-mark" aria-hidden="true" style="width:28px;height:28px"><svg viewBox="0 0 48 48" fill="none" focusable="false" style="width:26px;height:26px"><defs><linearGradient id="lfA" x1="6" y1="4" x2="42" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#eaffb4"/><stop offset="1" stop-color="#a6d937"/></linearGradient><linearGradient id="lfB" x1="6" y1="12" x2="24" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#5d7bff"/><stop offset="1" stop-color="#2a43d6"/></linearGradient><linearGradient id="lfC" x1="24" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1e2d74"/><stop offset="1" stop-color="#0b1230"/></linearGradient></defs><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" fill="url(#lfA)"/><path d="M7 14.5 24 23v19L7 33.5v-19Z" fill="url(#lfB)"/><path d="M41 14.5 24 23v19l17-9.5v-19Z" fill="url(#lfC)"/></svg></span>
+            <div><b>PeopleHub</b><span>HR workspace demo</span></div>
+          </div>
+
+          <div class="hrapp-user">
+            <i aria-hidden="true">MR</i>
+            <div><b>Maya Rao</b><span>Sample employee record</span></div>
+          </div>
+
+          <div class="hrapp-role">
+            <label for="hr-role">Viewing as</label>
+            <select id="hr-role" data-hr-role>
+              <option value="employee">Employee</option>
+              <option value="hr">HR manager</option>
+            </select>
+          </div>
+
+          <div class="hrapp-tabs" role="tablist" aria-label="HR modules">
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="dashboard" aria-selected="true">Dashboard</button>
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="onboarding" aria-selected="false">Onboarding <span class="hr-badge" data-onboard-badge>0</span></button>
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="selfservice" aria-selected="false">Self-service</button>
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="time" aria-selected="false">Time &amp; attendance</button>
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="benefits" aria-selected="false">Benefits</button>
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="performance" aria-selected="false">Performance</button>
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="comms" aria-selected="false">Announcements <span class="hr-badge" data-note-badge>0</span></button>
+            <button class="hrapp-tab" type="button" role="tab" data-hr-tab="reports" aria-selected="false" data-role-only="hr" hidden>Reporting</button>
+          </div>
+        </aside>
+
+        <div class="hrapp-main">
+          <div class="hrapp-top">
+            <div><h3 data-hr-tab-title>Dashboard</h3><p>Signed in as <span data-role-text>Employee</span> · illustrative data</p></div>
+            <span class="chip">Prototype</span>
+          </div>
+
+          <!-- Dashboard -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="dashboard" aria-label="Dashboard">
+            <div class="hrapp-grid">
+              <div class="hrapp-card"><span class="hrapp-metric"><em data-count="3">0</em></span><span>Tasks needing attention</span></div>
+              <div class="hrapp-card"><span class="hrapp-metric"><em data-count="24">0</em>h</span><span>Logged this fortnight</span></div>
+              <div class="hrapp-card"><span class="hrapp-metric"><em data-count="2">0</em></span><span>Benefits to review</span></div>
+            </div>
+            <div class="hrapp-card" style="margin-top:14px">
+              <h4>Next best actions</h4>
+              <p>Complete the onboarding checklist, clock in for today, and confirm your benefits selection. Each module below keeps one clear next step visible rather than burying it.</p>
+              <div class="progress"><b data-onboard-progress style="width:0%"></b></div>
+              <p class="hrapp-foot" data-onboard-out style="margin-top:9px">0 of 0 complete</p>
+            </div>
+          </section>
+
+          <!-- Onboarding -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="onboarding" aria-label="Onboarding" hidden>
+            <div class="hrapp-card" style="margin-bottom:14px">
+              <h4>New starter checklist</h4>
+              <p>Coordinate documents, equipment and introductions with clear ownership and progress visibility.</p>
+              <div class="progress"><b data-onboard-progress style="width:0%"></b></div>
+              <p class="hrapp-foot" data-onboard-out style="margin-top:9px">0 of 0 complete</p>
+            </div>
+            <ul class="task-list">
+              <li class="task"><input type="checkbox" id="ob1" data-onboard="ob1"><span>Sign the offer and contract documents</span><small>Employee</small></li>
+              <li class="task"><input type="checkbox" id="ob2" data-onboard="ob2"><span>Complete right-to-work and identity checks</span><small>HR</small></li>
+              <li class="task"><input type="checkbox" id="ob3" data-onboard="ob3"><span>Issue laptop, badge and system access</span><small>IT</small></li>
+              <li class="task"><input type="checkbox" id="ob4" data-onboard="ob4"><span>Assign a buddy and schedule week-one introductions</span><small>Manager</small></li>
+              <li class="task"><input type="checkbox" id="ob5" data-onboard="ob5"><span>Enrol in payroll and pension</span><small>HR</small></li>
+            </ul>
+          </section>
+
+          <!-- Self-service -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="selfservice" aria-label="Self-service" hidden>
+            <div class="hrapp-grid">
+              <div class="hrapp-card"><h4>My details</h4><p>Name, contact details, emergency contact and bank information — editable by the employee, with a change history.</p></div>
+              <div class="hrapp-card"><h4>Policies and documents</h4><p>Handbook, leave policy and pay dates in one place, with the version and effective date always shown.</p></div>
+              <div class="hrapp-card"><h4>My requests</h4><p>Track leave, equipment and letter requests with live status instead of email threads.</p></div>
+            </div>
+            <div class="hrapp-card" style="margin-top:14px">
+              <h4>Open requests</h4>
+              <ul class="log">
+                <li><span>Annual leave · 12–14 December</span><b>Approved</b></li>
+                <li><span>New monitor request</span><b>In review</b></li>
+                <li><span>Reference letter</span><b>Action needed</b></li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Time and attendance -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="time" aria-label="Time and attendance" hidden>
+            <div class="clock">
+              <div class="time"><span data-clock-time>--:--:--</span><small data-clock-sub>Not clocked in</small></div>
+              <button class="btn-sm" type="button" data-clock-btn>Clock in</button>
+            </div>
+            <div class="hrapp-card" style="margin-top:14px">
+              <h4>Today's log</h4>
+              <ul class="log" data-clock-log><li><span>No entries yet today.</span></li></ul>
+              <p class="hrapp-foot" style="margin-top:12px">Correction requests route to a manager with an auditable approval path.</p>
+            </div>
+          </section>
+
+          <!-- Benefits -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="benefits" aria-label="Benefits" hidden>
+            <div class="hrapp-grid">
+              <div class="hrapp-card"><h4>Core</h4><p>Statutory pension, 25 days holiday and standard cover. Included for everyone.</p><button class="btn-sm ghost" type="button" data-plan="core" aria-pressed="false">Choose plan</button></div>
+              <div class="hrapp-card"><h4>Flexible</h4><p>Adds private health cover, a cycle-to-work scheme and a flexible holiday pot.</p><button class="btn-sm ghost" type="button" data-plan="flex" aria-pressed="false">Choose plan</button></div>
+              <div class="hrapp-card"><h4>Family</h4><p>Enhanced parental leave, childcare support and an employee assistance programme.</p><button class="btn-sm ghost" type="button" data-plan="family" aria-pressed="false">Choose plan</button></div>
+            </div>
+            <p class="hrapp-foot" style="margin-top:14px">Eligibility guidance and enrolment link back to authoritative providers; the app presents, it does not adjudicate.</p>
+          </section>
+
+          <!-- Performance -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="performance" aria-label="Performance" hidden>
+            <div class="hrapp-card" style="margin-bottom:14px">
+              <h4>Current goals and check-ins</h4>
+              <p>Managers and employees prepare goals and review notes together, with role-based permissions and employee visibility.</p>
+            </div>
+            <ul class="task-list">
+              <li class="task"><span>Ship the onboarding revamp</span><small style="margin-left:auto"><label class="sr-only" for="g1">Status for onboarding revamp</label><select id="g1" data-goal="g1"><option value="not-started">Not started</option><option value="in-progress">In progress</option><option value="done">Done</option></select></small></li>
+              <li class="task"><span>Run two usability sessions</span><small style="margin-left:auto"><label class="sr-only" for="g2">Status for usability sessions</label><select id="g2" data-goal="g2"><option value="not-started">Not started</option><option value="in-progress">In progress</option><option value="done">Done</option></select></small></li>
+              <li class="task"><span>Complete Q4 development plan</span><small style="margin-left:auto"><label class="sr-only" for="g3">Status for development plan</label><select id="g3" data-goal="g3"><option value="not-started">Not started</option><option value="in-progress">In progress</option><option value="done">Done</option></select></small></li>
+            </ul>
+          </section>
+
+          <!-- Communication -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="comms" aria-label="Announcements" hidden>
+            <div class="note-item">
+              <b>Payroll cut-off moves to the 18th</b><span>From HR · posted two days ago</span>
+              <p>Please submit overtime and expense claims before the new cut-off so they appear in this month's run.</p>
+              <button class="btn-sm ghost" type="button" data-note="n1" style="margin-top:11px">Mark as read</button>
+            </div>
+            <div class="note-item">
+              <b>Benefits window opens Monday</b><span>From HR · posted today</span>
+              <p>Review the three plans in the Benefits module and confirm your selection by the end of the month.</p>
+              <button class="btn-sm ghost" type="button" data-note="n2" style="margin-top:11px">Mark as read</button>
+            </div>
+            <div class="note-item">
+              <b>Office closed for the winter break</b><span>From Operations · posted this week</span>
+              <p>The building is closed from 24 December and reopens on 2 January; remote cover is listed in the handbook.</p>
+              <button class="btn-sm ghost" type="button" data-note="n3" style="margin-top:11px">Mark as read</button>
+            </div>
+          </section>
+
+          <!-- Reporting (HR manager only) -->
+          <section class="hrapp-panel" role="tabpanel" data-hr-panel="reports" aria-label="Reporting" data-role-only="hr" hidden>
+            <div class="hrapp-card">
+              <h4>Operational overview</h4>
+              <p style="margin-bottom:14px">Aggregated views with definitions, access controls and suppression for groups too small to report safely.</p>
+              <div class="bars">
+                <div class="bar"><span>Onboarding completion</span><span class="bar-track"><i data-bar="onboard" style="width:0%"></i></span><b data-bar-out="onboard">0%</b></div>
+                <div class="bar"><span>Goals on track</span><span class="bar-track"><i data-bar="goals" style="width:0%"></i></span><b data-bar-out="goals">0%</b></div>
+                <div class="bar"><span>Announcements read</span><span class="bar-track"><i data-bar="notes" style="width:0%"></i></span><b data-bar-out="notes">0%</b></div>
+                <div class="bar"><span>Attendance logged</span><span class="bar-track"><i style="width:86%"></i></span><b>86%</b></div>
+              </div>
+              <p class="hrapp-foot" style="margin-top:14px">Attendance figure is illustrative. In a real build, cohorts smaller than five would be suppressed rather than shown.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section section-rule"><div class="shell">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">Why this order</p><h2>Foundations first,<br><span class="display-italic">then connections.</span></h2></div>
+        <p>The feature order follows the assignment brief: make frequent, foundational work dependable before layering on communication and decision support.</p>
+      </div>
+      <div class="panel-grid stagger">
+        <article class="panel reveal"><span class="panel-num">P0</span><h3>Onboarding</h3><p>First impressions are set in week one; a clear checklist removes the most common new-starter friction.</p></article>
+        <article class="panel reveal"><span class="panel-num">P0</span><h3>Self-service</h3><p>Most questions are simple status checks. Answering them in-app removes the bulk of routine HR email.</p></article>
+        <article class="panel reveal"><span class="panel-num">P0</span><h3>Time &amp; attendance</h3><p>Payroll depends on accurate, auditable time records — a foundational data-quality requirement.</p></article>
+        <article class="panel reveal"><span class="panel-num">P0</span><h3>Benefits</h3><p>Presenting plans clearly, with enrolment links, reduces confusion at the yearly window.</p></article>
+        <article class="panel reveal"><span class="panel-num">P1</span><h3>Performance</h3><p>Valuable, but only once permissions and record-keeping are trustworthy.</p></article>
+        <article class="panel reveal"><span class="panel-num">P1</span><h3>Communication</h3><p>Targeted announcements need the workflow foundations above them to stay signal, not noise.</p></article>
+        <article class="panel reveal"><span class="panel-num">P1</span><h3>Reporting</h3><p>Analytics demand clean data and careful suppression before they can be shown safely.</p></article>
+      </div>
+      <div class="notice lime" style="margin-top:34px"><strong>Prototype status</strong>This is a design demonstration, not a working HR system. No real employee data is used, nothing is stored on a server, and feature priorities remain hypotheses to validate with HR professionals.</div>
+    </div></section>
+  </main>
+
+  <div class="checker-band" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <footer class="site-footer"><div class="footer-inner">
+    <div class="footer-topline"><span>LeadForge / Academic showcase</span><span>A concept in progress · 2026</span></div>
+    <div class="footer-headline"><h2>Let's find<br>the next thing.</h2><a class="button" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-links"><div class="footer-lockup"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" focusable="false"><defs><linearGradient id="lfT2" x1="6" y1="4" x2="42" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#eaffb4"/><stop offset="1" stop-color="#a6d937"/></linearGradient><linearGradient id="lfL2" x1="6" y1="12" x2="24" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#5d7bff"/><stop offset="1" stop-color="#2a43d6"/></linearGradient><linearGradient id="lfR2" x1="24" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1e2d74"/><stop offset="1" stop-color="#0b1230"/></linearGradient></defs><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" fill="url(#lfT2)"/><path d="M7 14.5 24 23v19L7 33.5v-19Z" fill="url(#lfL2)"/><path d="M41 14.5 24 23v19l17-9.5v-19Z" fill="url(#lfR2)"/></svg></span><span class="brand-name">leadforge</span></a><p>An AI-assisted lead intelligence concept, plus a separate HR app study. Prototypes, not services.</p></div><div class="footer-column"><strong>Product</strong><a href="platform.html">Lead concept</a><a href="workspace.html">Workspace demo</a><a href="feasibility.html">Feasibility</a><a href="solution.html">Coverage</a><a href="contact.html">Feedback</a></div><div class="footer-column"><strong>Study</strong><a href="people.html">HR app design</a><a href="research.html">Research plan</a><a href="personas.html">Personas</a><a href="hr-app.html">HR prototype</a></div><div class="footer-column"><strong>Team &amp; notes</strong><a href="team.html">Creators</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookies</a></div></div>
+    <div class="footer-bottom"><span>Academic prototype. Sample data is illustrative; nothing is scraped, submitted, or stored on a server.</span><span>© LeadForge / 2026</span></div>
+  </div></footer>
+</body>
+</html>

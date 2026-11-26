@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="An interactive, local-only lead qualification workspace: weigh criteria, score fictional sample organizations, triage a pipeline, and export a shortlist.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>Workspace | LeadForge</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+  <script src="assets/lead-engine.js" defer></script>
+  <script src="assets/workspace.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-row">
+      <a class="brand" href="index.html" aria-label="LeadForge home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" focusable="false"><defs><linearGradient id="lfT" x1="6" y1="4" x2="42" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#eaffb4"/><stop offset="1" stop-color="#a6d937"/></linearGradient><linearGradient id="lfL" x1="6" y1="12" x2="24" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#5d7bff"/><stop offset="1" stop-color="#2a43d6"/></linearGradient><linearGradient id="lfR" x1="24" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1e2d74"/><stop offset="1" stop-color="#0b1230"/></linearGradient></defs><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" fill="url(#lfT)"/><path d="M7 14.5 24 23v19L7 33.5v-19Z" fill="url(#lfL)"/><path d="M41 14.5 24 23v19l17-9.5v-19Z" fill="url(#lfR)"/><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" stroke="#171918" stroke-opacity=".45" stroke-width="1" stroke-linejoin="round"/><path d="M24 10.4l1.6 3.1 3.3 1.2-3.3 1.2-1.6 3.1-1.6-3.1-3.3-1.2 3.3-1.2 1.6-3.1Z" fill="#17204f"/></svg></span><span><span class="brand-name">leadforge</span><span class="brand-caption">Prospect intelligence</span></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu"><span aria-hidden="true">+ </span>Menu</button>
+      <nav class="primary-nav" id="site-navigation" aria-label="Main navigation"><a href="index.html">Overview</a><a href="platform.html">Lead concept</a><a href="workspace.html" aria-current="page">Workspace</a><a href="people.html">HR app</a><a href="hr-app.html">HR prototype</a><a href="research.html">Research</a><a href="personas.html">Personas</a><a href="feasibility.html">Feasibility</a><a href="solution.html">Coverage</a><a href="team.html">Team</a></nav>
+      <a class="nav-cta header-cta" href="contact.html">Share a thought <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="shell">
+      <p class="eyebrow">Workspace / Interactive concept</p>
+      <h1>Score a shortlist<br>on <span class="display-italic">your own terms.</span></h1>
+      <p class="lede">Set the target profile, decide how much each factor matters, and watch a fictional sample of organizations re-rank. Everything runs in your browser against sample records — nothing is collected, sent, or saved to a server.</p>
+      <div class="page-meta"><span><i class="meta-square" aria-hidden="true"></i> Runs fully in the browser</span><span>Fictional sample organizations</span><span>State kept in local storage</span></div>
+    </div></section>
+
+    <section class="section-tight section-rule"><div class="shell">
+      <div class="ws" data-ws aria-label="Interactive lead qualification workspace">
+        <aside class="ws-panel" aria-label="Qualification criteria">
+          <h3>Qualification criteria</h3>
+          <span class="micro">Set the ideal profile, then weight what matters.</span>
+
+          <div class="field" style="margin-bottom:14px"><label for="ws-sector">Target sector</label><select id="ws-sector" data-ws-sector></select></div>
+          <div class="field" style="margin-bottom:14px"><label for="ws-size">Company size</label><select id="ws-size" data-ws-size></select></div>
+          <div class="field" style="margin-bottom:18px"><label for="ws-region">Region</label><select id="ws-region" data-ws-region></select></div>
+
+          <h3 style="font-size:13px;margin-bottom:10px">Factor weighting</h3>
+          <div class="ws-slider"><label for="w-sector">Sector match <output data-ws-weight-out="sector">30</output></label><input id="w-sector" type="range" min="0" max="100" step="5" value="30" data-ws-weight="sector"></div>
+          <div class="ws-slider"><label for="w-size">Company size <output data-ws-weight-out="size">15</output></label><input id="w-size" type="range" min="0" max="100" step="5" value="15" data-ws-weight="size"></div>
+          <div class="ws-slider"><label for="w-region">Region fit <output data-ws-weight-out="region">10</output></label><input id="w-region" type="range" min="0" max="100" step="5" value="10" data-ws-weight="region"></div>
+          <div class="ws-slider"><label for="w-signal">Buying signal <output data-ws-weight-out="signal">25</output></label><input id="w-signal" type="range" min="0" max="100" step="5" value="25" data-ws-weight="signal"></div>
+          <div class="ws-slider"><label for="w-source">Source reliability <output data-ws-weight-out="source">20</output></label><input id="w-source" type="range" min="0" max="100" step="5" value="20" data-ws-weight="source"></div>
+
+          <div class="ws-slider"><label for="ws-min">Minimum fit score <output>live</output></label><input id="ws-min" type="range" min="0" max="100" step="5" value="0" data-ws-min></div>
+        </aside>
+
+        <div>
+          <div class="ws-toolbar">
+            <div class="field"><label for="ws-search">Search</label><input id="ws-search" type="search" placeholder="Organization, sector, signal…" data-ws-search></div>
+            <div class="field"><label for="ws-state">Pipeline state</label><select id="ws-state" data-ws-state></select></div>
+            <button class="btn-sm ghost" type="button" data-ws-reset>Reset sample</button>
+            <button class="btn-sm" type="button" data-ws-export>Download CSV</button>
+          </div>
+
+          <div class="ws-summary">
+            <span>Matches <b data-ws-count>0</b></span>
+            <span>Average fit <b data-ws-avg>0%</b></span>
+            <span>Shortlisted <b data-ws-shortlist>0</b></span>
+          </div>
+
+          <div class="ws-table-wrap">
+            <table class="ws-table">
+              <thead><tr><th scope="col">Organization</th><th scope="col">Region</th><th scope="col">Fit score</th><th scope="col">Signal</th><th scope="col">Source</th><th scope="col">Pipeline</th></tr></thead>
+              <tbody data-ws-rows></tbody>
+            </table>
+            <p class="ws-empty micro" style="padding:24px" data-ws-empty hidden>No sample organizations match the current filters. Loosen a weight or widen the criteria.</p>
+          </div>
+          <p class="ws-legend"><span>Sample data only.</span><span>Scoring is transparent and rule-based.</span><span>Exports stay on your device.</span></p>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section section-rule"><div class="shell">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">How the score is built</p><h2>No black box.<br><span class="display-italic">Just arithmetic you can read.</span></h2></div>
+        <p>Every score is a weighted sum of five named factors. Move a weight and the ranking responds immediately, so reviewers can see exactly which signal is driving the order.</p>
+      </div>
+      <div class="panel-grid stagger">
+        <article class="panel reveal"><span class="panel-num">01</span><h3>Sector match</h3><p>How closely the organization's sector aligns with the profile you defined as the target.</p></article>
+        <article class="panel reveal"><span class="panel-num">02</span><h3>Company size</h3><p>Whether headcount lands inside the band you consider a realistic fit for the offer.</p></article>
+        <article class="panel reveal"><span class="panel-num">03</span><h3>Region fit</h3><p>Geography relative to the markets you can serve well today, not everywhere at once.</p></article>
+        <article class="panel reveal"><span class="panel-num">04</span><h3>Buying signal</h3><p>Public, permitted signals such as a stated initiative, funding event, or expansion note.</p></article>
+        <article class="panel reveal"><span class="panel-num">05</span><h3>Source reliability</h3><p>How well-sourced and recent the underlying record is, so confident claims stay confident.</p></article>
+        <article class="panel reveal"><span class="panel-num">06</span><h3>Human triage</h3><p>Move a row through new, review, shortlist, or pass. The pipeline state is yours to own.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section section-ink"><div class="shell">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">Guardrails</p><h2>Useful without<br><span class="display-italic">being careless.</span></h2></div>
+        <p>This workspace is deliberately conservative. It demonstrates the review layer that should sit between a search and any real outreach.</p>
+      </div>
+      <div class="grid-3 stagger">
+        <article class="panel reveal"><span class="smallcaps">Data</span><p>All twelve organizations are invented for demonstration. No real company, person, or contact detail is shown or stored.</p></article>
+        <article class="panel reveal"><span class="smallcaps">Storage</span><p>Your pipeline choices are saved only in this browser's local storage. Clearing site data resets everything.</p></article>
+        <article class="panel reveal"><span class="smallcaps">Export</span><p>The CSV is generated on your device from the rows currently on screen. It never leaves your machine.</p></article>
+      </div>
+      <div style="margin-top:34px" class="reveal"><a class="button" href="platform.html">Read the full concept <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+  </main>
+  <div class="checker-band" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-topline"><span>LeadForge / Academic showcase</span><span>A concept in progress · 2026</span></div>
+      <div class="footer-headline"><h2>Let's find<br>the next thing.</h2><a class="button" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a></div>
+      <div class="footer-links">
+        <div class="footer-lockup"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" focusable="false"><defs><linearGradient id="lfTw" x1="6" y1="4" x2="42" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#eaffb4"/><stop offset="1" stop-color="#a6d937"/></linearGradient><linearGradient id="lfLw" x1="6" y1="12" x2="24" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#5d7bff"/><stop offset="1" stop-color="#2a43d6"/></linearGradient><linearGradient id="lfRw" x1="24" y1="20" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#1e2d74"/><stop offset="1" stop-color="#0b1230"/></linearGradient></defs><path d="M24 6 41 14.5 24 23 7 14.5 24 6Z" fill="url(#lfTw)"/><path d="M7 14.5 24 23v19L7 33.5v-19Z" fill="url(#lfLw)"/><path d="M41 14.5 24 23v19l17-9.5v-19Z" fill="url(#lfRw)"/></svg></span><span class="brand-name">leadforge</span></a><p>Two distinct project tracks for clearer, more human work. Prototypes, not services.</p></div>
+        <div class="footer-column"><strong>Product</strong><a href="platform.html">Lead concept</a><a href="workspace.html">Workspace demo</a><a href="feasibility.html">Feasibility</a><a href="solution.html">Coverage</a><a href="contact.html">Feedback</a></div>
+        <div class="footer-column"><strong>Study</strong><a href="people.html">HR app design</a><a href="research.html">Research plan</a><a href="personas.html">Personas</a><a href="hr-app.html">HR prototype</a></div>
+        <div class="footer-column"><strong>Team &amp; notes</strong><a href="team.html">Creators</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookies</a></div>
+      </div>
+      <div class="footer-bottom"><span>Academic prototype. Sample data is illustrative; nothing is scraped, submitted, or stored on a server.</span><span>© LeadForge / 2026</span></div>
+    </div>
+  </footer>
+</body>
+</html>
