@@ -40,6 +40,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 img, svg { max-width: 100%; }
 ::selection { background: var(--lime); color: var(--ink); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+iframe#nl-badge-frame { display: none !important; }
 
 .skip-link {
   position: absolute; z-index: 1000; top: 12px; left: 12px;
