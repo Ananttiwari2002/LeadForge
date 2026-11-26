@@ -146,6 +146,8 @@ webinterface/
 │   ├── hr-app.js           # HR prototype behaviour (Track 02)
 │   ├── logo-leadforge.svg  # 3D logo
 │   └── favicon.svg
+├── favicon.ico             # Root icon (16/32/48) so browsers that request it get one
+├── serve.py                # Local dev server (HTTP/1.1 keep-alive, caching off)
 ├── HRMM504 CA1 2026 (1).docx   # Source assignment brief (Track 02)
 ├── .gitignore
 └── README.md
@@ -168,14 +170,21 @@ There is **no build step**. Open a file and it runs.
 
 ## Run it locally
 
-Any static file server works. The simplest option that ships with Python:
+The repository ships a small dev server that speaks **HTTP/1.1 with keep-alive** and disables
+caching, which avoids the `net::ERR_ABORTED` that Python's built-in one-liner can trigger:
 
 ```bash
 # from the project root
-py -m http.server 8765 --bind 127.0.0.1
+py serve.py
 ```
 
 Then open <http://127.0.0.1:8765/>.
+
+Zero-extra-files alternative (works, but closes the connection after every response):
+
+```bash
+py -m http.server 8765 --bind 127.0.0.1
+```
 
 > Opening `index.html` directly with `file://` also works, but a local server is recommended so that
 > relative asset paths and the `localStorage` demos behave exactly as they do in production.
